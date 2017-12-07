@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///Users/user/Downloads/svg-und-javascript%20(2).html -->
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Kombinationsschrift</title>
+  <style>
+    body {
+      background-color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Kombinationsschrift nach Albers -- SVG by @bitcraftlab  -->
+  <svg width="1140" height="580">
+
+    <style>
+    svg {
+      background-color: white;
+    }
+    .hilight {
+      fill: #000;
+      stroke: #fff;
+    }
+    .form {
+      fill: #fff;
+      stroke: #999;
+      stroke-width: 0.05px;
+    }
+
+    .tafel {
+      fill: #ccc;
+      stroke: #999;
+      stroke-width: 0.05px;
+    }
+    </style>
+
+    <!-- Grundformen -->
+    <!-- I: Kreis -->
+    <symbol id="I"><circle cx="0.5" cy="3.45" r="0.45"></circle></symbol>
+    <!-- II: Gerade -->
+    <symbol id="IIc"><rect height="3" width="1" y="1"></rect></symbol>
+    <symbol id="IId"><rect height="4" width="1"></rect></symbol>
+    <!-- III: Zweiseitig gerundet -->
+    <symbol id="IIIb"><path d="m 0 3 a 1 1 0 0 0 1 1 v -2 a 1 1 0 0 0 -1 1 z"></path></symbol>
+    <symbol id="IIIc"><path d="m 0 3 a 1 1 0 0 0 1 1 v -3 a 1 1 0 0 0 -1 1 z"></path></symbol>
+    <symbol id="IIId"><path d="m 0 3 a 1 1 0 0 0 1 1 v -4 a 1 1 0 0 0 -1 1 z"></path></symbol>
+    <!-- IV: Einseitig gerundet -->
+    <symbol id="IVa"><path d="m 0 3 a 1 1 0 0 0 1 1 v -1 h -1 z"></path></symbol>
+    <symbol id="IVb"><path d="m 0 3 a 1 1 0 0 0 1 1 v -2 h -1 z"></path></symbol>
+    <symbol id="IVc"><path d="m 0 3 a 1 1 0 0 0 1 1 v -3 h -1 z"></path></symbol>
+    <symbol id="IVd"><path d="m 0 3 a 1 1 0 0 0 1 1 v -4 h -1 z"></path></symbol>
+    <!-- Zweiseitig gerundet und gespiegelt (pq: um die Y-Achse) -->
+    <symbol id="IIIb-pq"><use href="#IIIb" transform="translate(0.5, 3) scale(-1, 1) translate(-0.5, -3)"></use></symbol>
+    <symbol id="IIIc-pq"><use href="#IIIc" transform="translate(0.5, 3.5) scale(-1, 1) translate(-0.5, -3.5)"></use></symbol>
+    <symbol id="IIId-pq"><use href="#IIId" transform="translate(0.5, 4) scale(-1, 1) translate(-0.5, -4)"></use></symbol>
+    <!-- Einseitig gerundet und gespiegelt (pq: um die Y-Achse, pd: um die Y-Achse, pd: um beide Achsen) -->
+    <symbol id="IVa-pq"><use href="#IVa" transform="translate(0.5, 3.5) scale(-1, 1) translate(-0.5, -3.5)"></use></symbol>
+    <symbol id="IVa-pb"><use href="#IVa" transform="translate(0.5, 3.5) scale(1, -1) translate(-0.5, -3.5)"></use></symbol>
+    <symbol id="IVa-pd"><use href="#IVa" transform="translate(0.5, 3.5) scale(-1, -1) translate(-0.5, -3.5)"></use></symbol>
+    <symbol id="IVb-pq"><use href="#IVb" transform="translate(0.5, 3) scale(-1, 1) translate(-0.5, -3)"></use></symbol>
+    <symbol id="IVb-pb"><use href="#IVb" transform="translate(0.5, 3) scale(1, -1) translate(-0.5, -3)"></use></symbol>
+    <symbol id="IVb-pd"><use href="#IVb" transform="translate(0.5, 3) scale(-1, -1) translate(-0.5, -3)"></use></symbol>
+    <symbol id="IVc-pq"><use href="#IVc" transform="translate(0.5, 2.5) scale(-1, 1) translate(-0.5, -2.5)"></use></symbol>
+    <symbol id="IVc-pb"><use href="#IVc" transform="translate(0.5, 2.5) scale(1, -1) translate(-0.5, -2.5)"></use></symbol>
+    <symbol id="IVc-pd"><use href="#IVc" transform="translate(0.5, 2.5) scale(-1, -1) translate(-0.5, -2.5)"></use></symbol>
+    <symbol id="IVd-pq"><use href="#IVd" transform="translate(0.5, 2) scale(-1, 1) translate(-0.5, -2)"></use></symbol>
+    <symbol id="IVd-pb"><use href="#IVd" transform="translate(0.5, 2) scale(1, -1) translate(-0.5, -2)"></use></symbol>
+    <symbol id="IVd-pd"><use href="#IVd" transform="translate(0.5, 2) scale(-1, -1) translate(-0.5, -2)"></use></symbol>
+    <!-- Buchstaben -->
+    <symbol id="a"><use href="#IVa-pq" y="-2"></use><use href="#IVb-pb"></use><use href="#IVc-pd" x="1.25"></use></symbol>
+    <symbol id="b"><use href="#IId"></use><use href="#IIIc-pq" x="1.25"></use></symbol>
+    <symbol id="c"><use href="#IIIc"></use><use href="#IVb" x="1.25" y="-1"></use></symbol>
+    <symbol id="d"><use href="#IIIc"></use><use href="#IId" x="1.25"></use></symbol>
+    <symbol id="e"><use href="#IIIc"></use><use href="#IVb-pd" x="1.25" y="-1"></use></symbol>
+    <symbol id="f"><use href="#IVd-pb"></use><use href="#IVa" x="1.25" y="-3.0"></use><use href="#IVa" x="1.25" y="-1"></use></symbol>
+    <symbol id="g"><use href="#IIIc"></use><use href="#IVd-pq" x="1.25" y="1"></use></symbol>
+    <symbol id="h"><use href="#IId"></use><use href="#IVc-pd" x="1.25"></use></symbol>
+    <symbol id="i"><use href="#I" y="-3"></use><use href="#IIc"></use></symbol>
+    <symbol id="j"><use href="#I" y="-3"></use><use href="#IVd-pq" y="1"></use></symbol>
+    <symbol id="k"><use href="#IId"></use><use href="#IVa-pq" x="1.25" y="-2.1"></use><use href="#IVb-pd" x="1.25"></use></symbol>
+    <symbol id="l"><use href="#IVd"></use></symbol>
+    <symbol id="m"><use href="#IIc"></use><use href="#IIc" x="1.25"></use><use href="#IVc-pd" x="2.5"></use></symbol>
+    <symbol id="n"><use href="#IIc"></use><use href="#IVc-pd" x="1.25"></use></symbol>
+    <symbol id="o"><use href="#IIIc"></use><use href="#IIIc-pq" x="1.25"></use></symbol>
+    <symbol id="p"><use href="#IId" y="1"></use><use href="#IIIc-pq" x="1.25"></use></symbol>
+    <symbol id="q"><use href="#IIIc"></use><use href="#IId" y="1" x="1.25"></use></symbol>
+    <symbol id="r"><use href="#IIc"></use><use href="#IVb" y="-1" x="1.25"></use></symbol>
+    <symbol id="long-s"><use href="#IVd-pb"></use><use href="#IVa" y="-3" x="1.25"></use></symbol>
+    <symbol id="s"><use href="#IIIb" y="-1"></use><use href="#IVa-pd"></use><use href="#IVa" y="-2" x="1.25"></use><use href="#IIIb-pq" x="1.25"></use></symbol>
+    <symbol id="t"><use href="#IVd-pb"></use><use href="#IVa-pq" y="-2" x="1.25"></use></symbol>
+    <symbol id="u"><use href="#IVc"></use><use href="#IVc-pq" x="1.25"></use></symbol>
+    <symbol id="v"><use href="#IVc-pd"></use><use href="#IVc-pq" x="1.25"></use></symbol>
+    <symbol id="w"><use href="#IVc-pd"></use><use href="#IVc-pd" x="1.25"></use><use href="#IVc-pq" x="2.5"></use></symbol>
+    <symbol id="x"><use href="#IVa" y="-2.1"></use><use href="#IVb-pb"></use><use href="#IVa-pq" y="-2.1" x="1.25"></use><use href="#IVb-pd" x="1.25"></use></symbol>
+    <symbol id="y"><use href="#IVc"></use><use href="#IVd-pq" y="1" x="1.25"></use></symbol>
+    <symbol id="z"><use href="#IVa-pq" y="-2"></use><use href="#IVb-pb"></use><use href="#IVb-pq" y="-1" x="1.25"></use><use href="#IVa-pb" x="1.25"></use></symbol>
+    <symbol id="and"> <use href="#IIIc"></use> <use href="#IId" x="1.25"></use><use href="#IVb-pq" y="-1.1" x="2.5"></use> <use href="#IVa-pd" x="2.5"></use></symbol>
+    <symbol id="1"><use href="#IVa-pq" y="-2"></use><use href="#IIc" x="1.25"></use></symbol>
+    <symbol id="2"><use href="#I" y="-2"></use><use href="#IVa-pb"></use><use href="#IIIb-pq" y="-1" x="1.25"></use><use href="#IVa-pb" x="1.25"></use></symbol>
+    <symbol id="3"><use href="#I" y="-2.1"></use><use href="#I"></use><use href="#IVa-pq" y="-2.1" x="1.25"></use><use href="#IIIb-pq" x="1.25"></use></symbol>
+
+    <!-- Die Buchstaben-Tafel -->
+    <g id="buchstaben-tafel" transform="scale(20) translate(1, 1)">
+      <rect height="13" width="55" class="tafel"></rect>
+      <g transform="translate(1, 1)" class="form">
+        <use href="#a" x="0"></use>
+        <use href="#b" x="3.5"></use>
+        <use href="#c" x="7"></use>
+        <use href="#d" x="10.5"></use>
+        <use href="#e" x="14"></use>
+        <use href="#f" x="17.5"></use>
+        <use href="#g" x="21"></use>
+        <use href="#h" x="24.5"></use>
+        <use href="#i" x="28"></use>
+        <use href="#j" x="30.25"></use>
+        <use href="#k" x="32.5"></use>
+        <use href="#l" x="36"></use>
+        <use href="#m" x="38.25"></use>
+        <use href="#n" x="43"></use>
+        <use href="#o" x="46.5"></use>
+        <use href="#p" x="50"></use>
+      </g>
+      <g transform="translate(1, 7)" class="form">
+        <use href="#q" x="0"></use>
+        <use href="#r" x="3.5"></use>
+        <use href="#long-s" x="7"></use>
+        <use href="#s" x="10.5"></use>
+        <use href="#t" x="14"></use>
+        <use href="#u" x="17.5"></use>
+        <use href="#v" x="21"></use>
+        <use href="#w" x="24.5"></use>
+        <use href="#x" x="29"></use>
+        <use href="#y" x="32.25"></use>
+        <use href="#z" x="35.5"></use>
+        <use href="#and" x="39"></use>
+        <use href="#1" x="43.75"></use>
+        <use href="#2" x="47.25"></use>
+        <use href="#3" x="50.75"></use>
+      </g>
+    </g>
+
+    <!-- Editor -->
+    <g transform="scale(20) translate(1, 15)">
+      <rect height="13" width="55" class="tafel"></rect>
+      <g id="editor" transform="translate(1, 1)" class="form">
+      </g>
+    </g>
+
+  </svg>
+  <script>
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // AUFGABE 1 : Buchstaben sollen beim Anklicken die Farbe wechseln
+
+
+    // Alle USE-Elemente innerhalb der Buchstaben-Tafel auswählen
+    var letters = document.querySelectorAll('#buchstaben-tafel use');
+
+    // Definiere eine Funktion die die den Style eines Buchstaben ändert.
+
+    // Funktion für direkte Style-Manipulation
+    function style_fn() {
+      console.log(this.style.fill);
+      if(this.style.fill === "black") {
+                 this.style.fill = "white";
+             } else {
+                 this.style.fill = "black";
+             }
+    };
+
+    // Funktion zum Aktivieren / Deaktivieren von Stylesheets  "class" (empfohlen)
+    function class_fn() {
+      console.log(this.classList);
+      if( this.classList.contains('hilight') ) {
+          this.classList.remove('hilight');
+      } else {
+          this.classList.add('hilight')
+      }
+    };
+
+    // Den Mousehandlern der Buchstaben eine Funktion zuweisen (ES 6 stlye)
+    letters.forEach( e => e.onmousedown = class_fn );
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    //
+    // AUFGABE 2 : Beim Tippen sollen Buchstaben eingefügt werden
+    //             (DEL und Backspace löscht Buchstaben)
+
+    // Erlaubte Zeichen
+    var alphabet = "abcdefghijklmnopqrstuvwxyz123";
+
+    // Startposition
+    var x = 0;
+    var y = 0;
+
+    // Dickte (TODO: Dickte nach Buchstabe variieren)
+    var dx = 4.5;
+
+    // Maximale Breite
+    var xmax = 50;
+
+    // Editor in der DOM
+    var editor = document.querySelector('#editor');
+
+    // Variante 1: Funktion zum Einfügen von SVG-Tags
+    function html_fn(buchstabe, x, y) {
+      var tag = '<use href="#' + buchstabe + '" x="' + x + '" y="' +  y +  '"/>';
+      editor.innerHTML = editor.innerHTML + tag;
+    }
+
+    // Variante 2 : Funktion zum Einfügen von DOM-Elementen (empfohlen)
+    function dom_fn(buchstabe, x, y) {
+      var e = document.createElementNS("http://www.w3.org/2000/svg", 'use');
+      e.setAttribute("href", "#" + buchstabe );
+      e.setAttribute("x", x);
+      e.setAttribute("y", y);
+      editor.appendChild(e);
+    }
+
+    // Keypress-Handler für druckbare Buchstaben
+    document.body.onkeypress = function(evt) {
+      // console.log('keypress', evt.key, evt.key);
+      // Neues Zeichen einfügen
+      if(alphabet.indexOf(evt.key) > -1 && x < xmax) {
+        dom_fn(evt.key, x, y);
+        x = x + dx;
+      }
+    }
+
+    // KeyDown-Handler für Meta-Tasten
+    document.body.onkeydown = function(evt) {
+      // console.log('keydown', evt.key, evt.key);
+      // letztes Zeichen löschen
+      if(evt.key === 'Delete' || evt.key === 'Backspace' && editor.lastChild) {
+        editor.lastChild.remove();
+        x = x - dx;
+      }
+    }
+
+  </script>
+
+</body></html>
